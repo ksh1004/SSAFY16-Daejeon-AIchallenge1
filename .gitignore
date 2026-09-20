@@ -1,0 +1,31 @@
+# ---- 대회 데이터 (재배포 불가) ----
+data/
+*.csv
+*.zip
+train/
+test/
+dev/
+
+# ---- 모델 · 체크포인트 (용량) ----
+checkpoints/
+models--*/
+*.safetensors
+*.bin
+*.pt
+
+# ---- 산출물 (확률 · 제출 파일에는 test 예측이 들어 있음) ----
+outputs/
+*.npy
+*.log
+
+# ---- 환경 ----
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- 기타 ----
+*.pdf
+.DS_Store
+Thumbs.db

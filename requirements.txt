@@ -1,0 +1,14 @@
+# PyTorch 는 GPU·드라이버에 맞춰 먼저 설치하세요 (README '환경' 참고). 예:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+
+transformers==4.57.6      # 5.x 는 AutoModelForVision2Seq 가 제거됨
+peft==0.20.0
+bitsandbytes>=0.45
+accelerate>=1.0
+safetensors
+numpy
+pandas
+pillow
+scipy
+scikit-learn
+tqdm
