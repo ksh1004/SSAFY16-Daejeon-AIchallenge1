@@ -1,6 +1,6 @@
 # 재활용품 이미지 VQA — Qwen2.5-VL-7B QLoRA
 
-**SSAFY 16기 1회차 AI 챌린지**(2026.08, 개인 참가)
+**SSAFY 16기 1회차 AI 챌린지**(2026.08.28 ~ 08.31, 개인 참가, 참가자 955명)
 
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.11%2B-EE4C2C?logo=pytorch&logoColor=white)
@@ -16,6 +16,7 @@
 |---|---|---|
 | 제공 베이스라인 | 0.68979 | — |
 | **최종 제출** | **0.86322** | **0.85494** |
+| **순위** (955명 중) | **250위** (상위 26.2%) | **314위** (상위 32.9%) |
 
 ### 핵심 성과
 
@@ -168,6 +169,22 @@ P = P_vlm^α · P_text^(1-α),   α = 0.75
 
 ## 5. 결과
 
+### 최종 순위
+
+| | 점수 | 순위 (955명 중) |
+|---|---|---|
+| Public | 0.86322 | 250위 (상위 26.2%) |
+| **Private (최종)** | **0.85494** | **314위 (상위 32.9%)** |
+
+![Public 리더보드: 250위, 0.86322](docs/images/leaderboard_public.png)
+![Private 리더보드: 314위, 0.85494](docs/images/leaderboard_private.png)
+
+Public과 Private는 test를 약 절반씩(각 약 2,537건) 나눠 채점합니다. 이 크기에서 정확도의 표준오차는 약 ±0.7%p라,
+두 점수의 차이(−0.83%p)는 우연으로 설명되는 범위입니다. 두 점수의 평균 0.8591은 홀드아웃 609건이 예측한 0.8621과
+0.3%p 차이로, 자체 검증셋이 test 전체 성능을 잘 맞혔습니다.
+
+### 제출 이력
+
 | # | 구성 | 홀드아웃 609 | Public | 증분 |
 |---|---|---|---|---|
 | 1 | 제공 베이스라인 (3B 4bit / 384px / `generate`) | — | 0.68979 | — |
@@ -284,7 +301,8 @@ P = P_vlm^α · P_text^(1-α),   α = 0.75
 ├── experiments/           실험 원본 코드 (기각된 것 포함, 수정하지 않고 보존) — 자체 README 참고
 ├── docs/
 │   ├── DEVELOPMENT_LOG.md 실험 순서대로 쓴 상세 개발 기록
-│   └── RETROSPECTIVE.md   회고
+│   ├── RETROSPECTIVE.md   회고
+│   └── images/            리더보드 캡처
 ├── requirements.txt
 └── .gitignore
 ```
