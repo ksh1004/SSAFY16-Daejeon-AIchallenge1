@@ -29,3 +29,15 @@ __pycache__/
 *.pdf
 .DS_Store
 Thumbs.db
+
+# ---- 로컬 보관용 (공개하지 않음) ----
+# LoRA 어댑터 폴더 (가중치 외에 설정·README까지)
+/lora_*/
+# 대회 당시 노트북 (주최측 베이스라인, 출력에 test 예측·질문 원문이 남은 노트북)
+/(2608*.ipynb
+# 작업 메모 · 옛 버전 파일
+/HANDOFF.md
+/discussion_post.md
+/README_old.md
+/make_submission_old.py
+/text_model_v2.py
